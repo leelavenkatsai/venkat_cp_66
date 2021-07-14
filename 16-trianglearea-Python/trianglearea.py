@@ -6,4 +6,7 @@
 
 def trianglearea(s1, s2, s3):
 	# your code goes here
-	pass
+	a = (s1+s2+s3)/2
+	area = (a*(a-s1)*(a-s2)*(a-s3))**0.5
+	return area
+	# pass
