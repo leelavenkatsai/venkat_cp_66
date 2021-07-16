@@ -4,4 +4,20 @@
 
 def mostfrequentdigit(n):
 	# your code goes here
-	pass
+	# pass
+	digit = -1
+	frequency = -1
+	for i in range(0,10):
+		count = dgtCount(i,n)
+		if (count > frequency):
+			frequency = count
+			digit = i
+	return digit
+def dgtCount(i,n):
+	count=0
+	while(n>0):
+		a = n%10
+		if(a == i):
+			count = count + 1
+		n = n//10
+	return count
