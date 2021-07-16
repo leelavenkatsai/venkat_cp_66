@@ -9,9 +9,17 @@
 # assert(applyCaesarCipher("We Attack At Dawn", 1) == "Xf Buubdl Bu Ebxo")
 # assert(applyCaesarCipher("zodiac", -2) == "xmbgya")
 
-
 def fun_applycaesarcipher(msg, shift):
-	return ""
+    otp = ""
+    for i in range(len(msg)):
+        char = msg[i]
+        if (char.isspace()):
+            otp += " "
+        elif(char.isupper()):
+            otp += chr((ord(char) + shift-65) % 26 + 65)
+        else:
+            otp += chr((ord(char) + shift - 97) % 26 + 97)
+    return otp
 
 
 
