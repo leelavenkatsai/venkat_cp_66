@@ -5,4 +5,11 @@
 
 def isperfectsquare(n):
 	# your code goes here
-	pass
+	# pass
+	if ( type(n) == str or n <= 0 or n%1 != 0):
+	 	return False
+	m = n**0.5
+	if( m ** 2  == n):
+		return True
+	else:
+		return False
