@@ -13,11 +13,8 @@ class HashTable(object):
         # Your code goes here
         # pass
         j = self.calculate_hash_value(string)
-        if(self.table[j] != None):
-            self.table[j] = (string)
-        else:
-            self.table[j] = [string]
-        return j
+        self.table.insert(j,string)
+        return -1
         
     def lookup(self, string):
         """Return the hash value if the
