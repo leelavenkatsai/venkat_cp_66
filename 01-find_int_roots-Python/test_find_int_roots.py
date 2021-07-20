@@ -12,3 +12,7 @@ import pytest
 def test_fun_find_int_roots(a, b, c, result):
     assert fun_find_int_roots(a, b, c) == result
 
+d = (b**2) - (4*a*c)
+	sol1 = (-b-math.sqrt(d))/(2*a)
+	sol2 = (-b+math.sqrt(d))/(2*a)
+	return int(sol1), int(sol2)
