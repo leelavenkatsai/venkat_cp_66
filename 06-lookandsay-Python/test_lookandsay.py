@@ -2,7 +2,7 @@
 import os,sys
 sys.path.append(os.getcwd())
 from lookandsay import lookandsay
-import pytest
+import pytest 
 
 
 @pytest.mark.parametrize("a, result",[
@@ -12,3 +12,4 @@ import pytest
 ])
 def test_lookandsay(a, result):
     assert lookandsay(a) == result
+
