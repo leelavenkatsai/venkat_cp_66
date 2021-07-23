@@ -7,4 +7,13 @@
 
 def digitcount(n):
 	# your code goes here
-	pass
+	# pass
+	n = abs(n)
+	c=0
+	if (n ==0):
+		return 1
+	while (n>0):
+		n = n//10
+		# if(n<0):
+		c = c +1
+	return c
