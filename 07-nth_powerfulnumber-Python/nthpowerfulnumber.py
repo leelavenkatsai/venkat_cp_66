@@ -25,9 +25,9 @@ def isPowerful(n):
 def nthpowerfulnumber(n):
     # Your code goes here
     x = 0
-    y = 0
+    z = 0
     while (x <= abs(n)):
-        y += 1
-        if(isPowerful(y)):
+        z += 1
+        if(isPowerful(z)):
            x += 1
-    return y
+    return z
