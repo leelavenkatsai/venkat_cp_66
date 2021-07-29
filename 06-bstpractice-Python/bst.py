@@ -10,13 +10,35 @@ class BST(object):
 
     def insert(self, new_val):
         # Your code goes here
-        pass
+        # pass
+        newNode = Node(new_val)
+        if(self.root == None):
+            self.root = newNode
+        else:
+            current = self.root
+            parent = self.root
+            while(current != None):
+                parent = current
+                if(new_val < current.value):
+                    current = current.left
+                else:
+                    parent.right = newNode
 
     def printSelf(self):
         # Your code goes here
-        pass
+        # pass
+        print(self.root)
+
         
     def search(self, find_val):
         # Your code goes here
-        pass
+        # pass\\
+        while self.root !=None:
+            if self.root.value == find_val:
+                return True
+            if self.root.value < find_val:
+                self.root = self.root.right
+            else:
+                self.root = self.root.left
+        return False
 
