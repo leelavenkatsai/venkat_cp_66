@@ -10,4 +10,33 @@
 
 
 def fun_nth_carolprime(n):
-    return 0
+    # return 0
+    found=0
+    k=2
+    while(found<=n):
+        
+        result=(2**k)-1    
+        carol=result*result-2
+        
+        k+=1
+        if (isPrime(carol)):
+            found+=1
+    return carol
+
+def isPrime(n):
+    if(n<2):
+        return False
+    if(n==2):
+        return True
+    if(n%2==0):
+        return False
+
+    temp=n//2
+    counter=3
+    for factor in range(3,temp+1,2):
+        if(n%factor==0):
+            return False
+    return True
+        
+# def nthCarolPrime(x):
+    
