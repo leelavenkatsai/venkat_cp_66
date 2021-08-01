@@ -10,5 +10,15 @@
 
 
 def fun_getaverage(s): 
-	return 0.0
-
+	# return 0.0
+	s = s.split(",")
+	num = []
+	for i in s:
+		if(i.isdigit()):
+			num.append(i)
+	if len(num) == 0:
+		return 0
+	else:
+		for i in range(0, len(num)):
+			num[i] = int(num[i])
+		return(sum(num)/len(num))
