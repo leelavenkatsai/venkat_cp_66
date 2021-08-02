@@ -3,5 +3,19 @@
 
 
 def fun_hasnoprimes(l):
-	return True
+	# return True
+    a=[]
+    for row in l:
+        for col in row:
+            if(noPrime(col)==False):
+                return False
+    return True
+def noPrime(a):
+    if(a==0 or a==2):
+        return False
+    if(a>=1):
+        for i in range(2,a):
+            if(a%i==0):
+                return True
+        return False
 
