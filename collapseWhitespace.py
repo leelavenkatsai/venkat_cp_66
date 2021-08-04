@@ -16,8 +16,18 @@
 
 def cw(s):
     # Your code goes here...
-    return ""
-
+    # return ""
+    prev=False
+    value=""
+    for c in s:
+        if (c.isspace()):
+            if (not prev):
+                value+=" "
+                prev=True
+        else:
+            value+=c
+            prev=False    
+    return value
 assert(cw("a\nb") == "a b")
 assert(cw("a\n   \t    b") == "a b")
 assert(cw("a\n   \t    b  \n\n  \t\t\t c   ") == "a b c ")
