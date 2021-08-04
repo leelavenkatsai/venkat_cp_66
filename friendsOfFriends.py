@@ -23,7 +23,25 @@ Thus, in this example, friendsOfFriends should return:
  'ramsay': set()
 }
 '''
+def readDict():
+    a = {}
+    n = int(input())
+    for i in range(n):
+        s = input().split()
+        a[s[0]] = set(s[1:])
+    return a
 
 def friendsOfFriends(d):
-    # Your code goes here...
-    return None
+#     # Your code goes here...
+#     return None  
+    count= dict()
+    for value in d:
+        count[value] = set()
+        for a in d[value]:
+            if a in d:
+                count[value].update(d[a] - d[value])
+        count[value] -= set([value])
+    d=count
+    return (d)
+
+    #return d
