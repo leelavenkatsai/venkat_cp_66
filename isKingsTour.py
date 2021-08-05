@@ -17,7 +17,29 @@
 # which you may assume is NxN for some N>0, and 
 # returns True if it represents a legal Kings Tour 
 # and False otherwise.
-
-def isKingsTour(board):
-    # Your code goes here...
-    pass
+def position(a,b):
+    l=[0,0]
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            if(b==a[i][j]):
+                l[0]=i
+                l[1]=j
+    return l
+def isKingsTour(L):
+    n=len(L)
+    k=len(L[0])
+    f=n*k
+    for i in range(1,f):
+        a1=position(L,i)
+        a2=position(L,i+1)
+        m=abs(a1[0]-a2[0])
+        c=abs(a1[1]-a2[1])
+        if(m==1 and c==0):
+            continue
+        elif(m==0 and c==1):
+            continue
+        elif(m==1 and c==1):
+            continue
+        else:
+            return False
+    return True
