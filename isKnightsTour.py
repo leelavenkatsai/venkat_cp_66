@@ -29,9 +29,31 @@
 # assert(isKnightsTour(board)==True)
 
 
-def isKnightsTour(board):
-    # Your code goes here...
-    pass
+def position(a,b):
+    l=[0,0]
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            if(b==a[i][j]):
+                l[0]=i
+                l[1]=j
+    return l
+def isKnightsTour(L):
+    n=len(L)
+    k=len(L[0])
+    f=n*k
+    for i in range(1,f):
+        a1=position(L,i)
+        a2=position(L,i+1)
+        m=abs(a1[0]-a2[0])
+        c=abs(a1[1]-a2[1])
+        if(m==1 and c==2):
+            continue
+        elif(m==2 and c==1):
+            continue
+        else:
+            return False
+    return True
+
 
 board = [
             [  1, 60, 39, 34, 31, 18,  9, 64 ],
