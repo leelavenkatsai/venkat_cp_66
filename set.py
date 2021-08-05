@@ -9,4 +9,16 @@
 
 def limitedPowerSet(n, k):
     # Your code goes here...
-    pass
+    # pass
+    l=[]
+    for i in range(n+1):
+        for j in range(k):
+            if(j==0):
+                s=set({})
+                l.append(s)
+            else:
+                s=set({j})
+                l.append(s)
+            if(len(l)==k):
+                print(l)
+                return l
